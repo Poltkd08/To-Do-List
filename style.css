@@ -47,7 +47,6 @@ ul { /*unordered list*/
     list-style-type: none;
     padding: 0;
     width: 80%; /* Ensure the ul doesn't exceed a certain width */
-    max-width: 600px; /* Add a max width */
     overflow-x: auto; /* Handle overflow */
 }
 
