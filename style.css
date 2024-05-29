@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(228, 239, 248);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 95vh; /* 1vh = 1% of viewport height */
+    width: 90vw;
+    flex-direction: column; /* per que les coses s'afegeixin una sota l'altre */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: blue;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: blue;
+}
+
+input:hover {
+    background-color: #98cdff;
+}
+
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 10px;  
+    border-color: blue;
+}
+
+button:hover {
+    background-color: #98cdff;
+}
+
+ul { /*unordered list*/
+    list-style-type: none;
+    padding: 0;
+    width: 80%; /* Ensure the ul doesn't exceed a certain width */
+    max-width: 600px; /* Add a max width */
+    overflow-x: auto; /* Handle overflow */
+}
+
+li { /*list element*/
+    background: #98cdff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    position: relative;
+}
+
+/*li span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    margin-right: 10px;  
+}*/
+
+li .task-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    margin-right: 10px; /* Add some space between the text and the buttons */
+}
+
+li.expanded .task-text {
+    white-space: normal; /* Allow wrapping */
+    overflow: visible;
+}
+
+.show-more-button {
+    background-color: rgb(255, 255, 0);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    margin-right: 5px;
+}
+
+.show-more-button:hover {
+    background-color: #ffee8d;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.delete-button:hover {
+    background-color: rgb(252, 92, 92);
+}
+
+.edit-button {
+    background-color: rgb(0, 255, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.edit-button:hover {
+    background-color: rgb(177, 253, 158);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
